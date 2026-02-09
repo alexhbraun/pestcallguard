@@ -182,38 +182,16 @@ export const DemoPage2: React.FC = () => {
 
             <div className="order-1 lg:order-2 relative flex justify-center">
                 {/* VISUAL CALL BLOCK REPLACEMENT */}
-                <div className="relative w-full max-w-md aspect-[4/5] bg-secondary rounded-xl overflow-hidden shadow-2xl group border-4 border-gray-800 flex flex-col items-center justify-center p-8">
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#1a2e24] to-secondary opacity-50"></div>
-                    
-                    {/* Pulsing Status */}
-                    <div className="relative z-10 flex flex-col items-center w-full">
-                        <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mb-8 animate-pulse">
-                            <div className="w-16 h-16 bg-primary/40 rounded-full flex items-center justify-center">
-                                <Phone className="w-8 h-8 text-white fill-current" />
-                            </div>
-                        </div>
-                        
-                        <h3 className="text-2xl font-bold text-white mb-2 tracking-wide uppercase">PestAnswer</h3>
-                        <p className="text-accent font-mono mb-8 animate-pulse">● System Active - Listening...</p>
-
-                        {/* Waveform Visualization (CSS) */}
-                        <div className="flex items-end justify-center gap-1 h-16 w-full mb-8">
-                            <div className="w-2 bg-primary/60 rounded-t h-4 animate-pulse [animation-delay:0ms]"></div>
-                            <div className="w-2 bg-primary/80 rounded-t h-8 animate-pulse [animation-delay:100ms]"></div>
-                            <div className="w-2 bg-primary rounded-t h-12 animate-pulse [animation-delay:200ms]"></div>
-                            <div className="w-2 bg-primary/80 rounded-t h-6 animate-pulse [animation-delay:300ms]"></div>
-                            <div className="w-2 bg-primary/60 rounded-t h-10 animate-pulse [animation-delay:400ms]"></div>
-                             <div className="w-2 bg-primary/80 rounded-t h-14 animate-pulse [animation-delay:150ms]"></div>
-                             <div className="w-2 bg-primary/50 rounded-t h-8 animate-pulse [animation-delay:250ms]"></div>
-                        </div>
-
-                         <div className="w-full bg-gray-800 rounded-lg p-4 border border-gray-700">
-                             <div className="flex items-center gap-3">
-                                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                 <p className="text-gray-300 text-sm font-mono typewriter">"Hello! Thanks for calling {businessName}..."</p>
-                             </div>
-                         </div>
-                    </div>
+                <div className="relative w-full max-w-md aspect-[9/16] bg-black rounded-xl overflow-hidden shadow-2xl group border-4 border-gray-800 flex flex-col items-center justify-center">
+                    <iframe 
+                        src="https://share.descript.com/embed/O85i0ZKmOCM" 
+                        width="100%" 
+                        height="100%" 
+                        frameBorder="0" 
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                        title="Descript Video"
+                    ></iframe>
                 </div>
             </div>
           </div>
