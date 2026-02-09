@@ -12,18 +12,7 @@ import { Pricing } from './components/Pricing';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 
-// Plumber components
-import { PlumberHeader } from './components/PlumberHeader';
-import { PlumberHero } from './components/PlumberHero';
-import { PlumberRealitySection } from './components/PlumberRealitySection';
-import { PlumberCostSection } from './components/PlumberCostSection';
-import { PlumberHowItWorks } from './components/PlumberHowItWorks';
-import { PlumberTargetAudience } from './components/PlumberTargetAudience';
-import { PlumberBusySeason } from './components/PlumberBusySeason';
-import { PlumberWhoThisIsFor } from './components/PlumberWhoThisIsFor';
-import { PlumberPricing } from './components/PlumberPricing';
-import { PlumberFinalCTA } from './components/PlumberFinalCTA';
-import { PlumberFooter } from './components/PlumberFooter';
+
 
 // Lazy load secondary pages
 const DemoPage = React.lazy(() => import('./components/DemoPage').then(module => ({ default: module.DemoPage })));
@@ -115,24 +104,6 @@ function App() {
             <DemoPage2 />
           </React.Suspense>
         );
-      case '#/plumber':
-        return (
-          <>
-            <PlumberHeader />
-            <main>
-              <PlumberHero />
-              <PlumberRealitySection />
-              <PlumberCostSection />
-              <PlumberHowItWorks />
-              <PlumberTargetAudience />
-              <PlumberBusySeason />
-              <PlumberWhoThisIsFor />
-              <PlumberPricing />
-              <PlumberFinalCTA />
-            </main>
-            <PlumberFooter />
-          </>
-        );
       // Handle explicit root, empty, or just hash
       case '#/':
       case '#':
@@ -144,15 +115,6 @@ function App() {
     }
   };
 
-  // Check if we're on the plumber route
-  const isPlumberRoute = route === '#/plumber';
-
-  // If plumber route, render the page directly without pest control header/footer
-  if (isPlumberRoute) {
-    return renderPage();
-  }
-
-  // Otherwise, render with pest control header/footer
   return (
     <>
       <Header />
