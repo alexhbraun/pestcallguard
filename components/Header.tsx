@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PestCallGuardLogo } from './PestCallGuardLogo';
+import { PestAnswerLogo } from './PestAnswerLogo';
 import { Menu, X } from 'lucide-react';
 
 export const Header: React.FC = () => {
@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0 py-4">
             <a href="#/" className="flex items-center gap-2" onClick={closeMenu}>
-              <PestCallGuardLogo />
+              <PestAnswerLogo />
             </a>
           </div>
 

@@ -43,7 +43,7 @@ export const BusySeason = () => {
                 That’s when <span className="text-primary decoration-accent underline decoration-4 underline-offset-4">missed calls spike</span>.
              </h3>
              <p className="text-lg text-neutral-medium font-medium leading-relaxed">
-                PestCall Guard keeps your schedule full without forcing you to hire another office employee.
+                PestAnswer keeps your schedule full without forcing you to hire another office employee.
              </p>
           </div>
 

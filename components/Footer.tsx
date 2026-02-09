@@ -1,5 +1,5 @@
 import React from 'react';
-import { PestCallGuardLogo } from './PestCallGuardLogo';
+import { PestAnswerLogo } from './PestAnswerLogo';
 
 export const Footer: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div className="col-span-1 md:col-span-2 flex flex-col items-center md:items-start">
                  <a href="#/" className="flex items-center gap-2">
-                  <PestCallGuardLogo className="text-white" />
+                  <PestAnswerLogo className="text-white" />
                 </a>
                 <p className="mt-6 text-center md:text-left text-gray-400 text-sm max-w-xs leading-relaxed font-medium">
                   24/7 Call Protection for Pest Control Companies. Stop losing revenue to missed calls.
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
             </div>
         </div>
         <div className="mt-8 border-t border-gray-700 pt-8 text-center">
-          <p className="text-base text-gray-400">&copy; {new Date().getFullYear()} PestCall Guard. All rights reserved.</p>
+          <p className="text-base text-gray-400">&copy; {new Date().getFullYear()} PestAnswer. All rights reserved.</p>
           
           <div className="mt-4 text-sm text-gray-500 space-y-1">
             <p>Legal Entity: 60.857.236 ALEXANDER HELMUT BRAUN — Registered in Brazil</p>

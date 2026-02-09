@@ -175,7 +175,7 @@ export const DemoPage2: React.FC = () => {
                    </button>
                    <p className="text-sm text-neutral-medium font-medium flex items-center gap-2">
                         <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                        Call this number and hear how PestCall Guard would answer your calls. This is a live demo line.
+                        Call this number and hear how PestAnswer would answer your calls. This is a live demo line.
                    </p>
                </div>
             </div>
@@ -193,7 +193,7 @@ export const DemoPage2: React.FC = () => {
                             </div>
                         </div>
                         
-                        <h3 className="text-2xl font-bold text-white mb-2 tracking-wide uppercase">PestCall Guard</h3>
+                        <h3 className="text-2xl font-bold text-white mb-2 tracking-wide uppercase">PestAnswer</h3>
                         <p className="text-accent font-mono mb-8 animate-pulse">● System Active - Listening...</p>
 
                         {/* Waveform Visualization (CSS) */}

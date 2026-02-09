@@ -21,7 +21,7 @@ export const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
-            PestCall Guard answers every inbound call 24/7, captures inspection requests, and makes sure no termite, rodent, or emergency job goes to the next company on Google.
+            PestAnswer answers every inbound call 24/7, captures inspection requests, and makes sure no termite, rodent, or emergency job goes to the next company on Google.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

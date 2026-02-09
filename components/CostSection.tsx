@@ -29,7 +29,7 @@ export const CostSection = () => {
                 </div>
                 
                 <p className="text-xl text-secondary mt-10 leading-relaxed font-bold">
-                If you lose just one strong inspection per month because nobody answered, that’s more than the monthly cost of PestCall Guard.
+                If you lose just one strong inspection per month because nobody answered, that’s more than the monthly cost of PestAnswer.
                 </p>
             </div>
              <div className="bg-secondary text-accent py-4 px-8 font-bold text-lg uppercase tracking-wider">

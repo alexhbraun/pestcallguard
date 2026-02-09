@@ -47,7 +47,7 @@ export const TargetAudience = () => {
             </div>
 
             <div className="bg-white/10 p-8 rounded-xl backdrop-blur-sm border border-white/10">
-              <h3 className="text-xl font-bold mb-4">PestCall Guard works alongside your current workflow.</h3>
+              <h3 className="text-xl font-bold mb-4">PestAnswer works alongside your current workflow.</h3>
               <p className="mb-6 text-gray-200">Compatible with ServiceTitan, Jobber, Housecall Pro, or simple calendar booking.</p>
               
               <div className="space-y-3 font-semibold">
