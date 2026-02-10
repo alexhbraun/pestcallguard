@@ -135,6 +135,7 @@ export const DemoPage: React.FC = () => {
                         <div className="origin-top transform scale-90 sm:scale-100 transition-transform duration-300">
                             {/* Removed rounded/overflow/bg-white constraints so the iframe's internal phone graphic determines the shape */}
                              <div style={{ width: '100%', maxWidth: '400px', height: '700px' }} className="relative mx-auto drop-shadow-2xl">
+                                  <iframe 
                                      src={`https://mockupflow-gules.vercel.app/m/${mockupId}${idid ? `?idid=${idid}` : ''}`} 
                                      width="100%" 
                                      height="100%" 

@@ -135,6 +135,7 @@ export const DemoPage2: React.FC = () => {
                      <div className="animate-float relative z-20">
                         <div className="origin-top transform scale-90 sm:scale-100 transition-transform duration-300">
                             <div style={{ width: '100%', maxWidth: '400px', height: '700px' }} className="relative mx-auto drop-shadow-2xl">
+                                 <iframe 
                                     src={`https://mockupflow-gules.vercel.app/m/${mockupId}${idid ? `?idid=${idid}` : ''}`} 
                                     width="100%" 
                                     height="100%" 
