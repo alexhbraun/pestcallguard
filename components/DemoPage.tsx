@@ -42,7 +42,7 @@ export const DemoPage: React.FC = () => {
     };
 
     // 1. Get Company Name (Default: [Your Business Name])
-    const rawBusinessName = getUrlParam('company') || getUrlParam('business');
+    const rawBusinessName = getUrlParam('company') || getUrlParam('business') || getUrlParam('for') || getUrlParam('name');
     const hasBusinessName = !!rawBusinessName;
     const businessName = rawBusinessName || "[Your Business Name]";
 
