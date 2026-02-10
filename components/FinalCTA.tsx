@@ -3,7 +3,7 @@ import { Phone } from 'lucide-react';
 
 export const FinalCTA = () => {
   return (
-    <section className="py-24 relative bg-gradient-to-br from-secondary via-[#0d2116] to-primary text-white overflow-hidden">
+    <section id="booking-section" className="py-24 relative bg-gradient-to-br from-secondary via-[#0d2116] to-primary text-white overflow-hidden">
       
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-40 animate-pulse-slow z-0" aria-hidden="true" />

@@ -11,6 +11,7 @@ import { WhoThisIsFor } from './components/WhoThisIsFor';
 import { Pricing } from './components/Pricing';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
+import { AudioDemo } from './components/AudioDemo';
 
 
 
@@ -57,6 +58,7 @@ function App() {
       <HowItWorks />
       <TargetAudience />
       <BusySeason />
+      <AudioDemo />
       <WhoThisIsFor />
       <Pricing />
       <FinalCTA />
