@@ -22,7 +22,9 @@ export const DemoPage: React.FC = () => {
     };
 
     // 1. Get Company Name (Default: [Your Business Name])
-    const businessName = getUrlParam('company') || getUrlParam('business') || "[Your Business Name]";
+    const rawBusinessName = getUrlParam('company') || getUrlParam('business');
+    const hasBusinessName = !!rawBusinessName;
+    const businessName = rawBusinessName || "[Your Business Name]";
 
     // 2. Get Subtitle (Default: Personalized Demo)
     const subtitle = getUrlParam('subtitle') || "Personalized Demo";
@@ -53,9 +55,11 @@ export const DemoPage: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-8 font-heading text-white uppercase drop-shadow-xl">
                 Never miss a <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">service call</span> again
             </h1>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-8">
-                {subtitle} for {businessName}
-            </h2>
+            {hasBusinessName && (
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-8">
+                    {subtitle} for {businessName}
+                </h2>
+            )}
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10 font-bold tracking-wide">
                 Here’s exactly how your missed calls would be handled — 24/7.
             </p>
@@ -78,9 +82,11 @@ export const DemoPage: React.FC = () => {
                <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-secondary leading-[1.1] mb-6 uppercase font-heading">
                 24/7 Pest Call <span className="text-primary">Protection</span>
                </h2>
-               <p className="text-xl text-neutral-medium leading-relaxed mb-4 font-bold">
-                Personalized Demo for <strong className="text-secondary">{businessName}</strong>
-               </p>
+               {hasBusinessName && (
+                   <p className="text-xl text-neutral-medium leading-relaxed mb-4 font-bold">
+                    Personalized Demo for <strong className="text-secondary">{businessName}</strong>
+                   </p>
+               )}
                <p className="text-lg text-neutral-medium leading-relaxed mb-8">
                 Hear how our system handles scheduling, questions, and emergencies just like your best office manager.
                </p>
