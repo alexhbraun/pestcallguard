@@ -17,7 +17,6 @@ import { AudioDemo } from './components/AudioDemo';
 
 // Lazy load secondary pages
 const DemoPage = React.lazy(() => import('./components/DemoPage').then(module => ({ default: module.DemoPage })));
-const DemoPage2 = React.lazy(() => import('./components/DemoPage2').then(module => ({ default: module.DemoPage2 })));
 const PrivacyPolicy = React.lazy(() => import('./components/PrivacyPolicy').then(module => ({ default: module.PrivacyPolicy })));
 const TermsAndConditions = React.lazy(() => import('./components/TermsAndConditions').then(module => ({ default: module.TermsAndConditions })));
 const ContactUs = React.lazy(() => import('./components/ContactUs').then(module => ({ default: module.ContactUs })));
@@ -95,15 +94,10 @@ function App() {
           </React.Suspense>
         );
       case '#/demo':
-        return (
-          <React.Suspense fallback={<div className="min-h-screen grid place-items-center">Loading...</div>}>
-            <DemoPage />
-          </React.Suspense>
-        );
       case '#/demo2':
         return (
           <React.Suspense fallback={<div className="min-h-screen grid place-items-center">Loading...</div>}>
-            <DemoPage2 />
+            <DemoPage />
           </React.Suspense>
         );
       // Handle explicit root, empty, or just hash
