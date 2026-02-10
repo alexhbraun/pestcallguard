@@ -77,27 +77,29 @@ export const DemoPage: React.FC = () => {
                         AI Chat <span className="text-secondary">Employee</span>
                     </h2>
                     
-                    {/* ENHANCED CTA for clarity */}
-                    <div className="mt-8 mb-10 flex justify-center lg:justify-start">
-                         <div className="group relative inline-flex items-center gap-3 px-5 py-4 bg-white border-2 border-accent/10 rounded-xl shadow-premium hover:shadow-premium-hover hover:border-accent/30 transition-all duration-300">
-                             {/* Ping Animation to draw attention */}
-                             <div className="absolute -top-1.5 -right-1.5 flex h-3 w-3">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+                    {/* ENHANCED CTA for clarity - Only show if idid is present */}
+                    {idid && (
+                        <div className="mt-8 mb-10 flex justify-center lg:justify-start">
+                             <div className="group relative inline-flex items-center gap-3 px-5 py-4 bg-white border-2 border-accent/10 rounded-xl shadow-premium hover:shadow-premium-hover hover:border-accent/30 transition-all duration-300">
+                                 {/* Ping Animation to draw attention */}
+                                 <div className="absolute -top-1.5 -right-1.5 flex h-3 w-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+                                 </div>
+                                 
+                                 <div className="bg-accent/10 p-2 rounded-lg">
+                                    <MessageSquare className="w-6 h-6 text-accent flex-shrink-0" />
+                                 </div>
+                                 
+                                 <p className="text-lg font-bold text-gray-700 max-w-xs sm:max-w-none text-left">
+                                    Click the chat icon on the phone demo to start chatting
+                                 </p>
+                                 
+                                 {/* Arrow pointing to phone on desktop */}
+                                 <ArrowRight className="hidden lg:block w-6 h-6 text-accent animate-pulse ml-2 flex-shrink-0" />
                              </div>
-                             
-                             <div className="bg-accent/10 p-2 rounded-lg">
-                                <MessageSquare className="w-6 h-6 text-accent flex-shrink-0" />
-                             </div>
-                             
-                             <p className="text-lg font-bold text-gray-700 max-w-xs sm:max-w-none text-left">
-                                Click the chat icon on the phone demo to start chatting
-                             </p>
-                             
-                             {/* Arrow pointing to phone on desktop */}
-                             <ArrowRight className="hidden lg:block w-6 h-6 text-accent animate-pulse ml-2 flex-shrink-0" />
-                         </div>
-                    </div>
+                        </div>
+                    )}
 
                     <div className="grid gap-6 text-left">
                          <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow duration-300">
@@ -121,31 +123,29 @@ export const DemoPage: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Right: Floating Phone Mockup */}
+                {/* Right: Floating Phone Mockup - Only show if idid is present */}
                 <div className="order-1 lg:order-2 relative w-full flex justify-center perspective-1000">
-                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-12 bg-black/20 rounded-[100%] blur-xl pointer-events-none"></div>
-                     
-                     {/* 
-                        Use a nested structure for scaling to avoid JIT issues.
-                        Outer div handles the float animation and centering.
-                        Middle div handles the responsive scaling.
-                        Inner div sets the fixed dimensions for the iframe.
-                     */}
-                     <div className="animate-float relative z-20">
-                        <div className="origin-top transform scale-90 sm:scale-100 transition-transform duration-300">
-                            {/* Removed rounded/overflow/bg-white constraints so the iframe's internal phone graphic determines the shape */}
-                             <div style={{ width: '100%', maxWidth: '400px', height: '700px' }} className="relative mx-auto drop-shadow-2xl">
-                                  <iframe 
-                                     src={`https://mockupflow-gules.vercel.app/m/${mockupId}${idid ? `?idid=${idid}` : ''}`} 
-                                     width="100%" 
-                                     height="100%" 
-                                     style={{ border: 'none', borderRadius: '12px', overflow: 'hidden' }} 
-                                     title="MockupFlow"
-                                     frameBorder="0"
-                                 ></iframe>
-                             </div>
-                        </div>
-                     </div>
+                     {idid && (
+                        <>
+                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-12 bg-black/20 rounded-[100%] blur-xl pointer-events-none"></div>
+                            
+                            <div className="animate-float relative z-20">
+                                <div className="origin-top transform scale-90 sm:scale-100 transition-transform duration-300">
+                                    {/* Removed rounded/overflow/bg-white constraints so the iframe's internal phone graphic determines the shape */}
+                                     <div style={{ width: '100%', maxWidth: '400px', height: '700px' }} className="relative mx-auto drop-shadow-2xl">
+                                          <iframe 
+                                             src={`https://mockupflow-gules.vercel.app/m/${mockupId}${idid ? `?idid=${idid}` : ''}`} 
+                                             width="100%" 
+                                             height="100%" 
+                                             style={{ border: 'none', borderRadius: '12px', overflow: 'hidden' }} 
+                                             title="MockupFlow"
+                                             frameBorder="0"
+                                         ></iframe>
+                                     </div>
+                                </div>
+                            </div>
+                        </>
+                     )}
                 </div>
             </div>
         </div>

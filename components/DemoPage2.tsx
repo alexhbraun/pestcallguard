@@ -79,24 +79,27 @@ export const DemoPage2: React.FC = () => {
                         Website Visitors <span className="text-primary">→</span> Booked Pest Inspections
                     </h2>
                     
-                    <div className="mt-8 mb-10 flex justify-center lg:justify-start">
-                         <div className="group relative inline-flex items-center gap-3 px-6 py-4 bg-neutral-light border-l-4 border-accent rounded-r-lg shadow-sm">
-                             <div className="absolute -top-1.5 -right-1.5 flex h-3 w-3">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                    {/* ENHANCED CTA for clarity - Only show if idid is present */}
+                    {idid && (
+                        <div className="mt-8 mb-10 flex justify-center lg:justify-start">
+                             <div className="group relative inline-flex items-center gap-3 px-6 py-4 bg-neutral-light border-l-4 border-accent rounded-r-lg shadow-sm">
+                                 <div className="absolute -top-1.5 -right-1.5 flex h-3 w-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                                 </div>
+                                 
+                                 <div className="bg-white p-2 rounded-full border border-gray-200">
+                                    <MessageSquare className="w-6 h-6 text-primary flex-shrink-0" />
+                                 </div>
+                                 
+                                 <p className="text-lg font-bold text-secondary max-w-xs sm:max-w-none text-left">
+                                    Click the chat icon on the phone to test it.
+                                 </p>
+                                 
+                                 <ArrowRight className="hidden lg:block w-6 h-6 text-accent animate-pulse ml-2 flex-shrink-0" />
                              </div>
-                             
-                             <div className="bg-white p-2 rounded-full border border-gray-200">
-                                <MessageSquare className="w-6 h-6 text-primary flex-shrink-0" />
-                             </div>
-                             
-                             <p className="text-lg font-bold text-secondary max-w-xs sm:max-w-none text-left">
-                                Click the chat icon on the phone to test it.
-                             </p>
-                             
-                             <ArrowRight className="hidden lg:block w-6 h-6 text-accent animate-pulse ml-2 flex-shrink-0" />
-                         </div>
-                    </div>
+                        </div>
+                    )}
 
                     <div className="grid gap-6 text-left">
                          <div className="flex items-start gap-4 p-6 rounded-lg bg-neutral-light border-l-4 border-primary">
@@ -129,23 +132,27 @@ export const DemoPage2: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Right: Floating Phone Mockup */}
+                {/* Right: Floating Phone Mockup - Only show if idid is present */}
                 <div className="order-1 lg:order-2 relative w-full flex justify-center">
-                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-12 bg-black/20 rounded-[100%] blur-xl pointer-events-none"></div>
-                     <div className="animate-float relative z-20">
-                        <div className="origin-top transform scale-90 sm:scale-100 transition-transform duration-300">
-                            <div style={{ width: '100%', maxWidth: '400px', height: '700px' }} className="relative mx-auto drop-shadow-2xl">
-                                 <iframe 
-                                    src={`https://mockupflow-gules.vercel.app/m/${mockupId}${idid ? `?idid=${idid}` : ''}`} 
-                                    width="100%" 
-                                    height="100%" 
-                                    style={{ border: 'none', borderRadius: '12px', overflow: 'hidden' }} 
-                                    title="MockupFlow"
-                                    frameBorder="0"
-                                ></iframe>
+                     {idid && (
+                        <>
+                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-12 bg-black/20 rounded-[100%] blur-xl pointer-events-none"></div>
+                            <div className="animate-float relative z-20">
+                                <div className="origin-top transform scale-90 sm:scale-100 transition-transform duration-300">
+                                    <div style={{ width: '100%', maxWidth: '400px', height: '700px' }} className="relative mx-auto drop-shadow-2xl">
+                                         <iframe 
+                                            src={`https://mockupflow-gules.vercel.app/m/${mockupId}${idid ? `?idid=${idid}` : ''}`} 
+                                            width="100%" 
+                                            height="100%" 
+                                            style={{ border: 'none', borderRadius: '12px', overflow: 'hidden' }} 
+                                            title="MockupFlow"
+                                            frameBorder="0"
+                                        ></iframe>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                     </div>
+                        </>
+                     )}
                 </div>
             </div>
         </div>
