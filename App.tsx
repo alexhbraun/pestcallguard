@@ -34,7 +34,14 @@ function App() {
 
     // Normalize path for scroll check logic
     let basePath = (window.location.hash || '#/').split('?')[0].toLowerCase();
-    // Remove trailing slash if present (and length > 2 to keep root '#/' intact if desired, though usually root is #/)
+    const pathname = window.location.pathname.toLowerCase();
+    
+    // Support clean URLs in basePath if no hash is present or it's just #/
+    if (basePath === '#/' && pathname !== '/') {
+      basePath = '#' + pathname;
+    }
+
+    // Remove trailing slash if present
     if (basePath.length > 2 && basePath.endsWith('/')) {
       basePath = basePath.slice(0, -1);
     }
@@ -68,7 +75,13 @@ function App() {
     // 1. Extract the base path (ignoring query params like ?company=...)
     let path = route.split('?')[0];
 
-    // 2. Normalize: Lowercase and remove trailing slash (e.g. '#/demo/' -> '#/demo')
+    // 2. Fallback to pathname if hash is empty or just #/
+    const pathname = window.location.pathname.toLowerCase();
+    if ((path === '#/' || path === '#' || path === '') && pathname !== '/') {
+      path = '#' + pathname;
+    }
+
+    // 3. Normalize: Lowercase and remove trailing slash (e.g. '#/demo/' -> '#/demo')
     path = path.toLowerCase();
     if (path.length > 2 && path.endsWith('/')) {
       path = path.slice(0, -1);
@@ -100,12 +113,15 @@ function App() {
             <DemoPage />
           </React.Suspense>
         );
-      // Handle explicit root, empty, or just hash
-      case '#/':
-      case '#':
-      case '':
-        return renderHomePage();
       default:
+        // Handle /m/ID routes
+        if (path.startsWith('#/m/')) {
+          return (
+            <React.Suspense fallback={<div className="min-h-screen grid place-items-center">Loading...</div>}>
+              <DemoPage />
+            </React.Suspense>
+          );
+        }
         // Default fallback to home if route not found
         return renderHomePage();
     }

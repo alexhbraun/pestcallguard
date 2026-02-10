@@ -5,9 +5,13 @@ import { Pricing } from './Pricing';
 import { DemoBookingSection } from './DemoBookingSection';
 
 export const DemoPage: React.FC = () => {
-    // Helper to parse URL params from hash
+    // Helper to parse URL params from hash or search
     const getUrlParam = (key: string) => {
         try {
+            // Check both hash and search string
+            const searchParams = new URLSearchParams(window.location.search);
+            if (searchParams.has(key)) return searchParams.get(key);
+
             const hash = window.location.hash;
             if (hash.includes('?')) {
                 const query = hash.split('?')[1];
@@ -21,6 +25,22 @@ export const DemoPage: React.FC = () => {
         return null;
     };
 
+    // Helper to extract path-based ID (e.g., /m/MOCKUP_ID)
+    const getPathId = () => {
+        const path = window.location.pathname;
+        const hash = window.location.hash;
+        
+        // Check pathname (clean URL)
+        const pathParts = path.split('/');
+        if (pathParts[1] === 'm' && pathParts[2]) return pathParts[2];
+
+        // Check hash
+        const hashParts = hash.split('?')[0].split('/');
+        if (hashParts[1] === 'm' && hashParts[2]) return hashParts[2];
+        
+        return null;
+    };
+
     // 1. Get Company Name (Default: [Your Business Name])
     const rawBusinessName = getUrlParam('company') || getUrlParam('business');
     const hasBusinessName = !!rawBusinessName;
@@ -31,7 +51,7 @@ export const DemoPage: React.FC = () => {
 
     // 3. Get Tracking ID (Default: None)
     const idid = getUrlParam('idid') || "";
-    const mockupId = "GAMhvSBdOqhVZml9PF8s";
+    const mockupId = getPathId() || getUrlParam('mockup') || "GAMhvSBdOqhVZml9PF8s";
 
     // 4. Get Phone Number (Default: 833-405-1548)
     const phoneNumber = getUrlParam('phone') || "833-405-1548";
