@@ -125,7 +125,7 @@ export const DemoPage2: React.FC = () => {
                 {/* Left: Text Content & Features */}
                 <div className="order-2 lg:order-1 text-center lg:text-left">
                     <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-secondary leading-[1.1] uppercase font-heading mb-6">
-                        Website Visitors <span className="text-primary">→</span> Booked Pest Inspections
+                        Booking Chatbot <span className="text-primary">on Site</span>
                     </h2>
                     
                     {/* ENHANCED CTA for clarity - Only show if idid is present */}

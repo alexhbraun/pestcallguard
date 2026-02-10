@@ -129,7 +129,7 @@ export const DemoPage: React.FC = () => {
                 {/* Left: Text Content & Features */}
                 <div className="order-2 lg:order-1 text-center lg:text-left">
                     <h2 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-primary leading-[1.1]">
-                        AI Chat <span className="text-secondary">Employee</span>
+                        Booking Chatbot <span className="text-secondary">on Site</span>
                     </h2>
                     
                     {/* ENHANCED CTA for clarity - Only show if idid is present */}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Play } from 'lucide-react';
+import { Waveform } from './Waveform';
 
 export const Hero = () => {
   return (
@@ -19,6 +20,8 @@ export const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold font-heading mb-8 leading-tight uppercase tracking-tight">
             Stop Losing Pest Control Jobs to <span className="text-accent">Missed Calls</span>.
           </h1>
+
+          <Waveform />
           
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
             PestAnswer answers every inbound call 24/7, captures inspection requests, and makes sure no termite, rodent, or emergency job goes to the next company on Google.
