@@ -211,6 +211,10 @@ export const DemoPage: React.FC = () => {
       {/* SECTION 5: CALENDAR BOOKING */}
       <DemoBookingSection />
 
+      <div className="py-4 text-center text-gray-200 text-xs opacity-20">
+        v1.1
+      </div>
+
     </div>
   );
 };
