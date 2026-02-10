@@ -2,7 +2,7 @@ import React from 'react';
 
 export const DemoBookingSection = () => {
     return (
-        <section id="book-walkthrough" className="py-24 bg-white border-t border-gray-100">
+        <section id="book-walkthrough" className="py-24 bg-neutral-light border-t border-gray-100">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center mb-12">
                     <h2 className="text-4xl md:text-5xl font-extrabold font-heading text-secondary mb-6 tracking-tight uppercase">
