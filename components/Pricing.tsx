@@ -62,6 +62,12 @@ export const Pricing = () => {
                 </div>
                 <span className="text-secondary font-bold text-lg">Full Call Recordings & Transcripts</span>
               </div>
+              <div className="flex items-start gap-4 border-t border-gray-100 pt-4 mt-4">
+                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
+                    <Check className="w-5 h-5 text-primary" strokeWidth={3} />
+                </div>
+                <span className="text-secondary font-bold text-lg">Automated Sales Chatbot <span className="text-primary font-black">(INCLUDED)</span></span>
+              </div>
             </div>
 
             {/* CTA Button */}

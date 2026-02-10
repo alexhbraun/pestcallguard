@@ -68,8 +68,57 @@ export const DemoPage2: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 2: AI WEB BOOKING (WHITE BACKGROUND) */}
-      <section className="bg-white py-20 lg:py-24 overflow-hidden border-b border-gray-100">
+      {/* SECTION 2: 24/7 PEST CALL PROTECTION (Now First) */}
+      <section className="bg-white py-20 lg:py-24 overflow-hidden border-b border-gray-100 relative">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div className="order-2 lg:order-1 text-center lg:text-left">
+               <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-secondary leading-[1.1] mb-6 uppercase font-heading">
+                24/7 Pest Call <span className="text-primary">Protection</span>
+               </h2>
+               <p className="text-xl text-neutral-medium leading-relaxed mb-4 font-bold">
+                Personalized Demo for <strong className="text-secondary">{businessName}</strong>
+               </p>
+               <p className="text-lg text-neutral-medium leading-relaxed mb-8">
+                Hear how our system handles scheduling, questions, and emergencies just like your best office manager.
+               </p>
+               
+               <div className="mt-8 space-y-4 flex flex-col items-center lg:items-start">
+                   <button 
+                    onClick={handlePhoneClick}
+                    className="w-full sm:w-auto bg-primary text-white font-bold text-xl px-8 py-5 rounded-lg shadow-lg hover:bg-green-900 hover:-translate-y-1 transition-all flex items-center justify-center gap-4 border-b-4 border-green-900"
+                   >
+                     <Phone fill="currentColor" size={24} />
+                     Call {phoneNumber}
+                   </button>
+                   <p className="text-sm text-neutral-medium font-medium flex items-center gap-2">
+                        <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                        Call this number and hear how PestAnswer would answer your calls.
+                   </p>
+               </div>
+            </div>
+
+            <div className="order-1 lg:order-2 relative flex justify-center">
+                {/* VISUAL CALL BLOCK REPLACEMENT */}
+                <div className="relative w-full max-w-md aspect-square bg-black rounded-xl overflow-hidden shadow-2xl group border-4 border-gray-800 flex flex-col items-center justify-center">
+                    <video 
+                        src="https://ik.imagekit.io/rgqefde41/0209.mp4" 
+                        className="absolute inset-0 w-full h-full object-cover"
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline
+                        controls
+                    />
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: AI WEB BOOKING (Now Second) */}
+      <section className="bg-neutral-light py-20 lg:py-28 relative border-t border-gray-200 overflow-hidden">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 
@@ -82,7 +131,7 @@ export const DemoPage2: React.FC = () => {
                     {/* ENHANCED CTA for clarity - Only show if idid is present */}
                     {idid && (
                         <div className="mt-8 mb-10 flex justify-center lg:justify-start">
-                             <div className="group relative inline-flex items-center gap-3 px-6 py-4 bg-neutral-light border-l-4 border-accent rounded-r-lg shadow-sm">
+                             <div className="group relative inline-flex items-center gap-3 px-6 py-4 bg-white border-l-4 border-accent rounded-r-lg shadow-sm">
                                  <div className="absolute -top-1.5 -right-1.5 flex h-3 w-3">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
@@ -102,7 +151,7 @@ export const DemoPage2: React.FC = () => {
                     )}
 
                     <div className="grid gap-6 text-left">
-                         <div className="flex items-start gap-4 p-6 rounded-lg bg-neutral-light border-l-4 border-primary">
+                         <div className="flex items-start gap-4 p-6 rounded-lg bg-white border-l-4 border-primary shadow-sm">
                              <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center text-primary flex-shrink-0 border border-gray-200">
                                  <Activity size={20} />
                              </div>
@@ -111,22 +160,13 @@ export const DemoPage2: React.FC = () => {
                                  <p className="text-sm text-neutral-medium mt-1 font-medium">Engage every visitor in under 2 seconds.</p>
                              </div>
                          </div>
-                         <div className="flex items-start gap-4 p-6 rounded-lg bg-neutral-light border-l-4 border-accent">
+                         <div className="flex items-start gap-4 p-6 rounded-lg bg-white border-l-4 border-accent shadow-sm">
                              <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center text-accent flex-shrink-0 border border-gray-200">
                                  <Calendar size={20} />
                              </div>
                              <div>
                                  <h4 className="font-bold text-secondary text-lg">Book Inspections</h4>
                                  <p className="text-sm text-neutral-medium mt-1 font-medium">Qualify termite, rodent, or general pest issues.</p>
-                             </div>
-                         </div>
-                         <div className="flex items-start gap-4 p-6 rounded-lg bg-neutral-light border-l-4 border-primary">
-                             <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center text-primary flex-shrink-0 border border-gray-200">
-                                 <UserCheck size={20} />
-                             </div>
-                             <div>
-                                 <h4 className="font-bold text-secondary text-lg">Convert Traffic</h4>
-                                 <p className="text-sm text-neutral-medium mt-1 font-medium">Convert traffic into scheduled inspections.</p>
                              </div>
                          </div>
                     </div>
@@ -155,55 +195,6 @@ export const DemoPage2: React.FC = () => {
                      )}
                 </div>
             </div>
-        </div>
-      </section>
-
-      {/* SECTION 3: 24/7 PEST CALL PROTECTION (LIGHT GRAY BACKGROUND) */}
-      <section className="bg-neutral-light py-20 lg:py-28 relative border-t border-gray-200">
-        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            <div className="order-2 lg:order-1">
-               <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-secondary leading-[1.1] mb-6 uppercase font-heading">
-                24/7 Pest Call <span className="text-primary">Protection</span>
-               </h2>
-               <p className="text-xl text-neutral-medium leading-relaxed mb-4 font-bold">
-                Personalized Demo for <strong className="text-secondary">{businessName}</strong>
-               </p>
-               <p className="text-lg text-neutral-medium leading-relaxed mb-8">
-                Hear how our system handles scheduling, questions, and emergencies just like your best office manager.
-               </p>
-               
-               <div className="mt-8 space-y-4">
-                   <button 
-                    onClick={handlePhoneClick}
-                    className="w-full sm:w-auto bg-primary text-white font-bold text-xl px-8 py-5 rounded-lg shadow-lg hover:bg-green-900 hover:-translate-y-1 transition-all flex items-center justify-center gap-4 border-b-4 border-green-900"
-                   >
-                     <Phone fill="currentColor" size={24} />
-                     Call {phoneNumber}
-                   </button>
-                   <p className="text-sm text-neutral-medium font-medium flex items-center gap-2">
-                        <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                        Call this number and hear how PestAnswer would answer your calls. This is a live demo line.
-                   </p>
-               </div>
-            </div>
-
-            <div className="order-1 lg:order-2 relative flex justify-center">
-                {/* VISUAL CALL BLOCK REPLACEMENT */}
-                <div className="relative w-full max-w-md aspect-square bg-black rounded-xl overflow-hidden shadow-2xl group border-4 border-gray-800 flex flex-col items-center justify-center">
-                    <video 
-                        src="https://ik.imagekit.io/rgqefde41/0209.mp4" 
-                        className="absolute inset-0 w-full h-full object-cover"
-                        autoPlay 
-                        loop 
-                        muted 
-                        playsInline
-                        controls
-                    />
-                </div>
-            </div>
-          </div>
         </div>
       </section>
 

@@ -66,8 +66,63 @@ export const DemoPage: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 2: AI CHAT EMPLOYEE (WHITE BACKGROUND) */}
-      <section className="bg-white py-20 lg:py-24 overflow-hidden">
+      {/* SECTION 2: AI VOICE EMPLOYEE (Now First) */}
+      <section className="bg-white py-20 lg:py-24 relative overflow-hidden">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div className="order-2 lg:order-1 text-center lg:text-left">
+               <h2 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-primary leading-[1.1] mb-6">
+                AI Voice <span className="text-secondary">Employee</span>
+               </h2>
+               <p className="text-xl text-gray-500 leading-relaxed mb-4 font-bold">
+                Personalized Demo for <strong className="text-gray-900">{businessName}</strong>
+               </p>
+               <p className="text-lg text-gray-500 leading-relaxed mb-8">
+                Hear how our AI handles complex conversations, answers questions, and books appointments over the phone just like a human — but 24/7.
+               </p>
+               
+               <div className="mt-8 flex justify-center lg:justify-start">
+                   <button 
+                    onClick={handlePhoneClick}
+                    className="w-full sm:w-auto bg-[#f97316] text-white font-bold text-2xl px-10 py-5 rounded-full shadow-lg shadow-orange-200 hover:bg-[#ea580c] hover:-translate-y-1 transition-all flex items-center justify-center gap-4 animate-pulse-slow"
+                   >
+                     Call Now {phoneNumber}
+                     <Phone fill="currentColor" size={28} />
+                   </button>
+               </div>
+            </div>
+
+            <div className="order-1 lg:order-2 relative flex justify-center">
+                <div className="relative w-full max-w-md aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl group border-4 border-white">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[#0ea5e9] to-teal-400 opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                    <img 
+                        src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1000&auto=format&fit=crop" 
+                        alt="Customer Service Representative" 
+                        className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md border border-white/40 px-3 py-1.5 rounded-lg shadow-lg flex items-center gap-2">
+                        <div className="h-2 w-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <span className="text-xs font-bold text-gray-800">Voice Active</span>
+                    </div>
+                    <div className="absolute bottom-8 left-8 text-white">
+                        <div className="flex items-center gap-2 mb-2">
+                             <div className="p-1.5 bg-white/20 backdrop-blur-md rounded-md">
+                                 <UserCheck size={16} />
+                             </div>
+                             <span className="text-sm font-medium text-white/90">Sentiment Analysis</span>
+                        </div>
+                        <p className="text-2xl font-bold font-heading">Friendly & Professional</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: AI CHAT EMPLOYEE (Now Second) */}
+      <section className="bg-slate-50 py-20 lg:py-28 relative border-t border-gray-100 overflow-hidden">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 
@@ -102,7 +157,7 @@ export const DemoPage: React.FC = () => {
                     )}
 
                     <div className="grid gap-6 text-left">
-                         <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow duration-300">
+                         <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                              <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0">
                                  <Activity size={20} />
                              </div>
@@ -111,7 +166,7 @@ export const DemoPage: React.FC = () => {
                                  <p className="text-sm text-gray-500 mt-1">Engages visitors in under 2 seconds, 24/7/365.</p>
                              </div>
                          </div>
-                         <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-shadow duration-300">
+                         <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                              <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 flex-shrink-0">
                                  <Calendar size={20} />
                              </div>
@@ -148,61 +203,6 @@ export const DemoPage: React.FC = () => {
                      )}
                 </div>
             </div>
-        </div>
-      </section>
-
-      {/* SECTION 3: AI VOICE EMPLOYEE */}
-      <section className="bg-slate-50 py-20 lg:py-28 relative border-t border-gray-100">
-        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            <div className="order-2 lg:order-1">
-               <h2 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-primary leading-[1.1] mb-6">
-                AI Voice <span className="text-secondary">Employee</span>
-               </h2>
-               <p className="text-xl text-gray-500 leading-relaxed mb-4">
-                Personalized Demo for <strong className="text-gray-900">{businessName}</strong>
-               </p>
-               <p className="text-lg text-gray-500 leading-relaxed mb-8">
-                Hear how our AI handles complex conversations, answers questions, and books appointments over the phone just like a human — but 24/7.
-               </p>
-               
-               <div className="mt-8">
-                   <button 
-                    onClick={handlePhoneClick}
-                    className="w-full sm:w-auto bg-[#f97316] text-white font-bold text-2xl px-10 py-5 rounded-full shadow-lg shadow-orange-200 hover:bg-[#ea580c] hover:-translate-y-1 transition-all flex items-center justify-center gap-4 animate-pulse-slow"
-                   >
-                     Call Now {phoneNumber}
-                     <Phone fill="currentColor" size={28} />
-                   </button>
-               </div>
-            </div>
-
-            <div className="order-1 lg:order-2 relative flex justify-center">
-                <div className="relative w-full max-w-md aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl group border-4 border-white">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-[#0ea5e9] to-teal-400 opacity-20 group-hover:opacity-30 transition-opacity"></div>
-                    <img 
-                        src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1000&auto=format&fit=crop" 
-                        alt="Customer Service Representative" 
-                        className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md border border-white/40 px-3 py-1.5 rounded-lg shadow-lg flex items-center gap-2">
-                        <div className="h-2 w-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span className="text-xs font-bold text-gray-800">Voice Active</span>
-                    </div>
-                    <div className="absolute bottom-8 left-8 text-white">
-                        <div className="flex items-center gap-2 mb-2">
-                             <div className="p-1.5 bg-white/20 backdrop-blur-md rounded-md">
-                                 <UserCheck size={16} />
-                             </div>
-                             <span className="text-sm font-medium text-white/90">Sentiment Analysis</span>
-                        </div>
-                        <p className="text-2xl font-bold font-heading">Friendly & Professional</p>
-                    </div>
-                </div>
-            </div>
-          </div>
         </div>
       </section>
 
