@@ -26,8 +26,8 @@ export const DemoPage2: React.FC = () => {
     // 2. Get Subtitle (Default: Personalized Demo)
     const subtitle = getUrlParam('subtitle') || "Personalized Demo";
 
-    // 3. Get Ad ID for Botmockups (Default: Provided ID)
-    const adId = getUrlParam('adid') || "1767875484656x241277494768435200";
+    // 3. Get Ad ID for MockupFlow (Default: Provided ID)
+    const adId = getUrlParam('adid') || "GAMhvSBdOqhVZml9PF8s";
 
     // 4. Get Phone Number (Default: 833-405-1548)
     const phoneNumber = getUrlParam('phone') || "833-405-1548";
@@ -133,13 +133,14 @@ export const DemoPage2: React.FC = () => {
                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-12 bg-black/20 rounded-[100%] blur-xl pointer-events-none"></div>
                      <div className="animate-float relative z-20">
                         <div className="origin-top transform scale-90 sm:scale-100 transition-transform duration-300">
-                            <div style={{ width: '374px', height: '761px' }} className="relative mx-auto drop-shadow-2xl">
+                            <div style={{ width: '100%', maxWidth: '400px', height: '700px' }} className="relative mx-auto drop-shadow-2xl">
                                  <iframe 
-                                    src={`https://app.botmockups.com/embed?adid=${adId}&mobileid=1`} 
+                                    src={`https://mockupflow-gules.vercel.app/m/${adId}`} 
                                     width="100%" 
                                     height="100%" 
-                                    style={{ border: 'none' }} 
-                                    title="Botmockups"
+                                    style={{ border: 'none', borderRadius: '12px', overflow: 'hidden' }} 
+                                    title="MockupFlow"
+                                    frameBorder="0"
                                 ></iframe>
                             </div>
                         </div>

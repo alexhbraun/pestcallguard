@@ -25,8 +25,8 @@ export const DemoPage: React.FC = () => {
   // 2. Get Subtitle (Default: Personalized Demo)
   const subtitle = getUrlParam('subtitle') || "Personalized Demo";
 
-  // 3. Get Ad ID for Botmockups (Default: Provided ID)
-  const adId = getUrlParam('adid') || "1767875484656x241277494768435200";
+  // 3. Get Ad ID for MockupFlow (Default: Provided ID)
+  const adId = getUrlParam('adid') || "GAMhvSBdOqhVZml9PF8s";
 
   // 4. Get Phone Number (Default: 833-405-1548)
   const phoneNumber = getUrlParam('phone') || "833-405-1548";
@@ -133,15 +133,16 @@ export const DemoPage: React.FC = () => {
                      <div className="animate-float relative z-20">
                         <div className="origin-top transform scale-90 sm:scale-100 transition-transform duration-300">
                             {/* Removed rounded/overflow/bg-white constraints so the iframe's internal phone graphic determines the shape */}
-                            <div style={{ width: '374px', height: '761px' }} className="relative mx-auto drop-shadow-2xl">
-                                 <iframe 
-                                    src={`https://app.botmockups.com/embed?adid=${adId}&mobileid=1`} 
-                                    width="100%" 
-                                    height="100%" 
-                                    style={{ border: 'none' }} 
-                                    title="Botmockups"
-                                ></iframe>
-                            </div>
+                             <div style={{ width: '100%', maxWidth: '400px', height: '700px' }} className="relative mx-auto drop-shadow-2xl">
+                                  <iframe 
+                                     src={`https://mockupflow-gules.vercel.app/m/${adId}`} 
+                                     width="100%" 
+                                     height="100%" 
+                                     style={{ border: 'none', borderRadius: '12px', overflow: 'hidden' }} 
+                                     title="MockupFlow"
+                                     frameBorder="0"
+                                 ></iframe>
+                             </div>
                         </div>
                      </div>
                 </div>
