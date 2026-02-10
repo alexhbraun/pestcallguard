@@ -182,7 +182,7 @@ export const DemoPage2: React.FC = () => {
 
             <div className="order-1 lg:order-2 relative flex justify-center">
                 {/* VISUAL CALL BLOCK REPLACEMENT */}
-                <div className="relative w-full max-w-md aspect-[9/16] bg-black rounded-xl overflow-hidden shadow-2xl group border-4 border-gray-800 flex flex-col items-center justify-center">
+                <div className="relative w-full max-w-md aspect-square bg-black rounded-xl overflow-hidden shadow-2xl group border-4 border-gray-800 flex flex-col items-center justify-center">
                     <video 
                         src="https://ik.imagekit.io/rgqefde41/0209.mp4" 
                         className="absolute inset-0 w-full h-full object-cover"
