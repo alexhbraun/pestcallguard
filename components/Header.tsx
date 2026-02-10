@@ -29,6 +29,7 @@ export const Header: React.FC = () => {
           <div className="hidden md:block">
             <nav className="ml-10 flex items-baseline space-x-6">
               <a href="#/" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">Home</a>
+              <a href="#/demo" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">Demo</a>
               <a href="#features" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">How It Works</a>
               <a href="#pricing" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">Pricing</a>
               <a href="#/contact" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">Contact</a>
