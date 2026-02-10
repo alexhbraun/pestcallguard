@@ -29,7 +29,7 @@ export const Header: React.FC = () => {
           <div className="hidden md:block">
             <nav className="ml-10 flex items-baseline space-x-6">
               <a href="#/" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">Home</a>
-              <a href="#/demo" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">Demo</a>
+              <a href="#/demo2" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">Demo</a>
               <a href="#features" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">How It Works</a>
               <a href="#pricing" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">Pricing</a>
               <a href="#/contact" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">Contact</a>
@@ -71,7 +71,7 @@ export const Header: React.FC = () => {
         <div className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-xl z-40 animate-fade-in-up origin-top">
           <div className="px-4 py-6 space-y-4 flex flex-col">
             <a href="#/" onClick={closeMenu} className="text-lg font-medium text-gray-700 hover:text-accent block border-b border-gray-100 pb-2">Home</a>
-            <a href="#/demo" onClick={closeMenu} className="text-lg font-medium text-gray-700 hover:text-accent block border-b border-gray-100 pb-2">Demo</a>
+            <a href="#/demo2" onClick={closeMenu} className="text-lg font-medium text-gray-700 hover:text-accent block border-b border-gray-100 pb-2">Demo</a>
             <a href="#features" onClick={closeMenu} className="text-lg font-medium text-gray-700 hover:text-accent block border-b border-gray-100 pb-2">Features</a>
             <a href="#niches" onClick={closeMenu} className="text-lg font-medium text-gray-700 hover:text-accent block border-b border-gray-100 pb-2">Niches</a>
             <a href="#audio-demo" onClick={closeMenu} className="text-lg font-medium text-gray-700 hover:text-accent block border-b border-gray-100 pb-2">Listen</a>
