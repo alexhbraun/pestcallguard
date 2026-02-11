@@ -56,8 +56,8 @@ export const DemoPage: React.FC = () => {
     const idid = getUrlParam('idid') || "";
     const mockupId = getPathId() || getUrlParam('mockup') || "GqvNCYDLs9crmshHkBJy";
 
-    // 4. Get Phone Number (Default: 833-405-1548)
-    const phoneNumber = getUrlParam('phone') || "833-405-1548";
+    // 4. Get Phone Number (Default: 833-805-7331)
+    const phoneNumber = getUrlParam('phone') || "833-805-7331";
 
     const handlePhoneClick = () => {
         alert(`DEMO MODE: Calling ${phoneNumber}...`);

@@ -12,7 +12,7 @@ export const ContactUs: React.FC = () => {
 
   const handlePhoneClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    alert("DEMO MODE:\n\nIn a real environment, this would open your phone dialer to call: (920) 777-7683");
+    alert("DEMO MODE:\n\nIn a real environment, this would open your phone dialer to call: 833-805-7331");
   };
 
   return (
@@ -36,7 +36,7 @@ export const ContactUs: React.FC = () => {
                 onClick={handlePhoneClick} 
                 className="ml-2 text-lg text-accent hover:underline font-semibold bg-transparent border-none cursor-pointer"
               >
-                (920) 777-7683
+                833-805-7331
               </button>
             </div>
           </div>
