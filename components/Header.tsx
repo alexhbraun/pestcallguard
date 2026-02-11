@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PestAnswerLogo } from './PestAnswerLogo';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,10 +39,18 @@ export const Header: React.FC = () => {
           {/* Desktop CTA */}
           <div className="hidden md:block">
              <a
-              href="#booking-section"
-              className="ml-4 px-6 py-3 text-sm font-bold text-white bg-primary rounded-lg shadow-sm hover:bg-green-900 transition-all duration-300 uppercase tracking-wide"
+              href="tel:8338057331"
+              className="ml-4 px-6 py-2 border-2 border-accent rounded-full hover:bg-gray-50 transition-all duration-300 group flex items-center gap-3"
             >
-              Book Setup Call
+              <div className="flex flex-col items-center">
+                  <span className="text-sm font-bold text-secondary uppercase tracking-tight flex items-center gap-2">
+                      Click to speak to your Pest Control Agent 
+                      <Phone className="w-4 h-4 fill-current text-secondary" />
+                  </span>
+                  <span className="text-sm font-medium text-gray-600">
+                      (833) 805-7331
+                  </span>
+              </div>
             </a>
           </div>
 
