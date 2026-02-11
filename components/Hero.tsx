@@ -45,6 +45,11 @@ export const Hero = () => {
               Test Live Demo
             </a>
           </div>
+
+          <div className="mt-8 flex items-center justify-center gap-2 text-sm md:text-base font-medium text-gray-300 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+            <span className="text-xl">🛡️</span>
+            <span>Now protecting pest control companies across the U.S.</span>
+          </div>
           
           <div className="mt-16 flex flex-wrap justify-center gap-8 md:gap-16 opacity-80 grayscale">
           </div>

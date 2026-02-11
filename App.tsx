@@ -13,6 +13,7 @@ import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { AudioDemo } from './components/AudioDemo';
 import { WhyPestAnswer } from './components/WhyPestAnswer';
+import { FAQSection } from './components/FAQSection';
 
 
 
@@ -68,6 +69,7 @@ function App() {
       <AudioDemo />
       <WhyPestAnswer />
       <WhoThisIsFor />
+      <FAQSection />
       <Pricing />
       <FinalCTA />
     </>

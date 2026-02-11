@@ -123,6 +123,38 @@ export const WhyPestAnswer: React.FC = () => {
             </div>
         </div>
 
+        {/* System Specs - Authority */}
+        <div className="mt-16 border-t border-gray-200 pt-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+            
+            <div className="flex flex-col items-center gap-3">
+              <div className="h-12 w-12 rounded-full bg-[#0F2E1E]/5 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#0F2E1E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                </svg>
+              </div>
+              <h4 className="font-bold text-[#0F2E1E]">Enterprise-Grade Infrastructure</h4>
+            </div>
+
+            <div className="flex flex-col items-center gap-3">
+              <div className="h-12 w-12 rounded-full bg-[#0F2E1E]/5 flex items-center justify-center">
+                <Check className="h-6 w-6 text-[#0F2E1E]" />
+              </div>
+              <h4 className="font-bold text-[#0F2E1E]">99.9% Uptime Guarantee</h4>
+            </div>
+
+            <div className="flex flex-col items-center gap-3">
+               <div className="h-12 w-12 rounded-full bg-[#0F2E1E]/5 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#0F2E1E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                </svg>
+              </div>
+              <h4 className="font-bold text-[#0F2E1E]">No Robotic IVR Menus</h4>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
   );
