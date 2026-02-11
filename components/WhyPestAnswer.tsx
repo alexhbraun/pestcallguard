@@ -10,7 +10,7 @@ export const WhyPestAnswer: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col items-center mb-10 text-center">
           <h2 className="text-3xl sm:text-[42px] font-bold text-[#0F2E1E] uppercase font-heading leading-tight">
-            Why PestAnswer
+            Why Use PestAnswer
           </h2>
           <div className="h-1 w-[60px] bg-accent mt-4"></div>
         </div>
