@@ -32,7 +32,6 @@ export const Header: React.FC = () => {
               <a href="#/demo2" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">Demo</a>
               <a href="#features" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">How It Works</a>
               <a href="#pricing" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">Pricing</a>
-              <a href="#/contact" className="text-secondary hover:text-primary font-bold uppercase tracking-wide text-sm transition-colors">Contact</a>
             </nav>
           </div>
 
@@ -40,16 +39,21 @@ export const Header: React.FC = () => {
           <div className="hidden md:block">
              <a
               href="tel:8338057331"
-              className="ml-4 px-6 py-2 border-2 border-accent rounded-full hover:bg-gray-50 transition-all duration-300 group flex items-center justify-center min-w-[280px]"
+              className="ml-4 px-6 py-2 border-2 border-accent rounded-full hover:bg-gray-50 transition-all duration-300 group flex items-center justify-center min-w-[240px]"
             >
               <div className="flex flex-col items-center w-full">
                   <div className="flex items-center justify-center gap-2 w-full">
-                      <span className="text-xs sm:text-sm font-bold text-secondary uppercase tracking-tight text-center">
-                          CLICK TO SPEAK TO YOUR PEST CONTROL AGENT
-                      </span>
-                      <Phone className="w-4 h-4 fill-current text-secondary flex-shrink-0" />
+                      <div className="flex flex-col items-center">
+                        <span className="text-xs sm:text-sm font-bold text-secondary uppercase tracking-tight text-center leading-tight">
+                            CLICK TO SPEAK TO
+                        </span>
+                        <span className="text-xs sm:text-sm font-bold text-secondary uppercase tracking-tight text-center leading-tight">
+                            YOUR PEST CONTROL AGENT
+                        </span>
+                      </div>
+                      <Phone className="w-5 h-5 fill-current text-secondary flex-shrink-0 ml-1" />
                   </div>
-                  <span className="text-sm font-medium text-gray-600 mt-0.5">
+                  <span className="text-sm font-medium text-gray-600 mt-1">
                       (833) 805-7331
                   </span>
               </div>
