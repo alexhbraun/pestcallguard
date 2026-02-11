@@ -43,14 +43,9 @@ export const Header: React.FC = () => {
             >
               <div className="flex flex-col items-center w-full">
                   <div className="flex items-center justify-center gap-2 w-full">
-                      <div className="flex flex-col items-center">
-                        <span className="text-xs sm:text-sm font-bold text-secondary uppercase tracking-tight text-center leading-tight">
-                            CLICK TO SPEAK TO
-                        </span>
-                        <span className="text-xs sm:text-sm font-bold text-secondary uppercase tracking-tight text-center leading-tight">
-                            YOUR PEST CONTROL AGENT
-                        </span>
-                      </div>
+                      <span className="text-sm sm:text-base font-bold text-secondary tracking-tight text-center">
+                          Click to speak to AI
+                      </span>
                       <Phone className="w-5 h-5 fill-current text-secondary flex-shrink-0 ml-1" />
                   </div>
                   <span className="text-sm font-medium text-gray-600 mt-1">
