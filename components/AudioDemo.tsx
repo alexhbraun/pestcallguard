@@ -114,8 +114,8 @@ export const AudioDemo: React.FC = () => {
                         <MessageSquare className="h-6 w-6 text-secondary" />
                     </div>
                     <div>
-                        <h3 className="text-xl font-bold text-white mb-2">Instant SMS Follow-up</h3>
-                        <p className="text-blue-100/80">If the user hangs up or needs a link, the AI instantly sends a text message to continue the conversation.</p>
+                        <h3 className="text-xl font-bold text-white mb-2">Instant Notification Follow-up</h3>
+                        <p className="text-blue-100/80">If the user hangs up or needs a link, the AI instantly sends a notification to continue the conversation.</p>
                     </div>
                 </div>
                 
