@@ -12,6 +12,7 @@ import { Pricing } from './components/Pricing';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { AudioDemo } from './components/AudioDemo';
+import { WhyPestAnswer } from './components/WhyPestAnswer';
 
 
 
@@ -65,6 +66,7 @@ function App() {
       <TargetAudience />
       <BusySeason />
       <AudioDemo />
+      <WhyPestAnswer />
       <WhoThisIsFor />
       <Pricing />
       <FinalCTA />
