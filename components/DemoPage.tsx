@@ -49,9 +49,12 @@ export const DemoPage: React.FC = () => {
     // 2. Get Subtitle (Default: Personalized Demo)
     const subtitle = getUrlParam('subtitle') || "Personalized Demo";
 
-    // 3. Get Tracking ID (Default: None)
+    // 3. Get Headline (Default: Never miss a service call again)
+    const headline = getUrlParam('headline') || null;
+
+    // 4. Get Tracking ID (Default: None)
     const idid = getUrlParam('idid') || "";
-    const mockupId = getPathId() || getUrlParam('mockup') || "GAMhvSBdOqhVZml9PF8s";
+    const mockupId = getPathId() || getUrlParam('mockup') || "GqvNCYDLs9crmshHkBJy";
 
     // 4. Get Phone Number (Default: 833-405-1548)
     const phoneNumber = getUrlParam('phone') || "833-405-1548";
@@ -73,7 +76,11 @@ export const DemoPage: React.FC = () => {
          <div className="relative z-10 mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8 text-center">
             
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-8 font-heading text-white uppercase drop-shadow-xl">
-                Never miss a <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">service call</span> again
+                {headline || (
+                    <>
+                        Never miss a <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">service call</span> again
+                    </>
+                )}
             </h1>
             {hasBusinessName && (
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-8">
@@ -208,7 +215,7 @@ export const DemoPage: React.FC = () => {
                                 <div className="origin-top transform scale-90 sm:scale-100 transition-transform duration-300">
                                     <div style={{ width: '100%', maxWidth: '400px', height: '700px' }} className="relative mx-auto drop-shadow-2xl">
                                          <iframe 
-                                            src={`https://mockupflow-gules.vercel.app/m/${mockupId}${idid ? `?idid=${idid}` : ''}`} 
+                                            src={`https://mockupflow-gules.vercel.app/m/${mockupId}${idid ? `?idid=${idid}` : ''}${rawBusinessName ? `${idid ? '&' : '?'}for=${encodeURIComponent(rawBusinessName)}` : ''}`} 
                                             width="100%" 
                                             height="100%" 
                                             style={{ border: 'none', borderRadius: '12px', overflow: 'hidden' }} 
