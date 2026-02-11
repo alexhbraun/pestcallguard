@@ -40,14 +40,16 @@ export const Header: React.FC = () => {
           <div className="hidden md:block">
              <a
               href="tel:8338057331"
-              className="ml-4 px-6 py-2 border-2 border-accent rounded-full hover:bg-gray-50 transition-all duration-300 group flex items-center gap-3"
+              className="ml-4 px-6 py-2 border-2 border-accent rounded-full hover:bg-gray-50 transition-all duration-300 group flex items-center justify-center min-w-[280px]"
             >
-              <div className="flex flex-col items-center">
-                  <span className="text-sm font-bold text-secondary uppercase tracking-tight flex items-center gap-2">
-                      Click to speak to your Pest Control Agent 
-                      <Phone className="w-4 h-4 fill-current text-secondary" />
-                  </span>
-                  <span className="text-sm font-medium text-gray-600">
+              <div className="flex flex-col items-center w-full">
+                  <div className="flex items-center justify-center gap-2 w-full">
+                      <span className="text-xs sm:text-sm font-bold text-secondary uppercase tracking-tight text-center">
+                          CLICK TO SPEAK TO YOUR PEST CONTROL AGENT
+                      </span>
+                      <Phone className="w-4 h-4 fill-current text-secondary flex-shrink-0" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-600 mt-0.5">
                       (833) 805-7331
                   </span>
               </div>
