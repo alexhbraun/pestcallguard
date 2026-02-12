@@ -3,7 +3,7 @@ import { Check } from 'lucide-react';
 
 export const Pricing = () => {
   return (
-    <section id="pricing" className="py-24 bg-white border-t border-gray-200">
+    <section id="pricing" className="py-24 bg-neutral-light border-t border-gray-200">
       <div className="container mx-auto px-4">
         
         {/* 1. Headline & Subheadline */}
